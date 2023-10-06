@@ -41,12 +41,17 @@ header {
   justify-content: space-between;
   z-index: 1000;
   box-shadow: var(--box-shadow);
+  background-color: var(--black);
 }
 
 header .logo {
   color: var(--black);
   font-size: 2.5rem;
   font-weight: bolder;
+}
+
+header .logo span {
+  color: white;
 }
 
 header .logo i {
@@ -57,7 +62,7 @@ header .navbar a {
   font-size: 1.7rem;
   border-radius: 0.5rem;
   padding: 0.5rem 1.5rem;
-  color: var(--light-color);
+  color: white;
 }
 
 header .navbar a.active,
@@ -139,8 +144,8 @@ header .icons #menu-bars {
 }
 .dishes .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 4rem;
 }
 
 .dishes .box-container .box {
@@ -151,17 +156,30 @@ header .icons #menu-bars {
   box-shadow: var(--box-shadow);
   position: relative;
   overflow: hidden;
-  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
 .dishes .box-container .box img {
   height: 17rem;
   margin: 1rem 0;
+  max-width: 100%;
 }
 
 .dishes .box-container .box h3 {
   color: var(--black);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+}
+.dishes .box-container .box .text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dishes .box-container .box p {
+  color: var(--green);
+  font-weight: bolder;
+  margin-right: 1rem;
+  font-size: 2rem;
 }
 .dishes .box-container .box span {
   color: var(--green);
@@ -170,21 +188,28 @@ header .icons #menu-bars {
   font-size: 2.5rem;
 }
 
+.footer {
+  background-color: var(--black);
+  color: white;
+}
+
 .footer .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+  padding-left: 8rem;
 }
 
 .footer .box-container .box h3 {
   padding: 0.5rem 0;
-  font-size: 2.5rem;
-  color: var(--black);
+  font-size: 2rem;
+}
+.footer .box-container .box i {
+  font-size: 2rem;
 }
 .footer .box-container .box span {
   padding: 0.5rem 0;
-  font-size: 2rem;
-  color: var(--light-color);
+  font-size: 1.5rem;
 }
 
 /* *-- MEDİA QUERİES */
@@ -202,6 +227,10 @@ header .icons #menu-bars {
 @media (max-width: 768px) {
   header .icons #menu-bars {
     display: inline-block;
+  }
+
+  header .logo {
+    padding-left: 2rem;
   }
 
   header .navbar {
@@ -226,6 +255,17 @@ header .icons #menu-bars {
     margin: 1rem;
     font-size: 2rem;
     background-color: #eee;
+    color: var(--black);
+  }
+
+  .dishes .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    gap: 3rem;
+  }
+
+  .dishes {
+    padding-left: 2rem;
   }
 }
 
