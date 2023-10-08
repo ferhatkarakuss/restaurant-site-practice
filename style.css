@@ -365,7 +365,12 @@ header .logo i {
   }
 
   .footer {
-    flex-direction: column;
+    text-align: left;
+    display: flex;
+  }
+  .footer .box-container {
+    padding: 0;
+    margin-left: 10px;
     text-align: left;
   }
 }
