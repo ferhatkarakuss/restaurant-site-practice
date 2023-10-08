@@ -332,14 +332,28 @@ header .logo i {
 }
 
 @media (max-width: 768px) {
-  header .icons #menu-bars {
-    display: inline-block;
-  }
-
   header .logo {
     padding-left: 2rem;
+    font-size: 2rem;
   }
-
+  header {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-wrapper {
+    font-size: 1.7rem;
+    margin-right: 10rem;
+  }
+  .owl-carousel {
+    max-width: auto !important;
+    width: 100% !important;
+  }
+  .owl-nav {
+    display: flex;
+  }
+  .owl-nav span {
+    font-size: 5rem;
+  }
   .dishes .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
