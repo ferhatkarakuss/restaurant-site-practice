@@ -1,12 +1,67 @@
-let menu = document.querySelector("#menu-bars");
-let navbar = document.querySelector(".navbar");
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel();
+});
 
-menu.onclick = () => {
-  menu.classList.toggle("fa-times");
-  navbar.classList.toggle("active");
-};
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 1,
+    },
+  },
+});
 
-window.onscroll = () => {
-  menu.classList.remove("fa-times");
-  navbar.classList.remove("fa-active");
-};
+const priceIcons = document.querySelectorAll(".fiyat");
+const hazirlikButon = document.querySelectorAll(".hazirlik");
+const alerjenButon = document.querySelectorAll(".alerjen");
+
+priceIcons.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    iziToast.show({
+      title: "Fiyat:",
+      message: " 100 TL",
+      titleColor: "white",
+      messageColor: "white",
+      titleSize: "2rem",
+      messageSize: "2rem",
+      backgroundColor: "#192a56",
+    });
+  });
+});
+
+hazirlikButon.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    iziToast.show({
+      title: "Hazırlanma Süresi:",
+      message: "15 Dakika",
+      titleColor: "white",
+      messageColor: "white",
+      titleSize: "2rem",
+      messageSize: "2rem",
+      backgroundColor: "#192a56",
+    });
+  });
+});
+
+alerjenButon.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    iziToast.show({
+      title: "Alerjen Uyarısı:",
+      message: "Gluten içerir.",
+      titleColor: "white",
+      messageColor: "white",
+      titleSize: "2rem",
+      messageSize: "2rem",
+      backgroundColor: "#192a56",
+    });
+  });
+});
