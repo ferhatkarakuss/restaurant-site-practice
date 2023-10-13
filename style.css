@@ -62,9 +62,9 @@ header .logo i {
   text-align: center;
   color: var(--black);
   font-size: 2.5rem;
-  padding-bottom: 2rem;
-
-  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  font-weight: bold;
 }
 
 /* *carosel */
@@ -112,9 +112,9 @@ header .logo i {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--black) !important; /* Nokta rengi */
-  border-radius: 50%; /* Yuvarlak şekil verir */
-  margin: 0 5px; /* Noktalar arasındaki boşluk */
+  background-color: var(--black) !important;
+  border-radius: 50%;
+  margin: 0 5px;
   cursor: pointer;
   color: #000000;
 }
@@ -167,6 +167,11 @@ header .logo i {
   font-size: 2.5rem;
   padding-left: 1rem;
 }
+.dishes .box-container .box .fiyat {
+  color: var(--green);
+  font-weight: bold;
+}
+
 .dishes .box-container .box .text {
   margin-left: auto;
   margin-right: auto;
@@ -198,45 +203,78 @@ header .logo i {
 .footer {
   background-color: var(--black);
   color: white;
-  display: flex;
 }
 
-.footer .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.5rem;
-  padding-left: 8rem;
-  margin-left: 20rem;
-}
-
-.footer .box-container .box {
-  flex: 1;
-}
-
-.footer .box-container .box h2 {
+.footer-header {
+  text-align: center;
   font-size: 2rem;
 }
-.footer .box-container .box h3 {
-  padding: 0.5rem 0;
+.logo i {
+  color: var(--green);
+}
+.footer-section.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-content {
+  justify-content: space-between;
+  margin-left: 5%;
+}
+.contact,
+.social {
+  flex: 1;
+}
+.social {
+  color: white;
+  display: block;
+  padding-bottom: 15px;
+}
+.contact {
   font-size: 1.5rem;
+  display: block;
 }
-.footer .box-container .box i {
-  font-size: 1.5rem;
+.contact p {
+  padding: 1rem;
 }
-.footer .box-container .box span {
-  padding: 0.5rem 0;
-  font-size: 1.5rem;
-}
-.social-media-list {
-  list-style: none;
-  text-decoration: none;
-  padding: 0;
-}
-.social-media-list i,
-.social-media-list a {
+
+.social a {
+  display: block;
   color: white;
   font-size: 1.5rem;
-  margin-top: 2rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+.contact-header {
+  text-align: left;
+  padding-left: 1rem;
+}
+.socaial-header {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.footer-links {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-right: 10%;
+}
+.footer-links h2 {
+  padding-left: 2rem;
+}
+.footer-links ul {
+  list-style: none;
+  font-size: 1.5rem;
+  color: white;
+}
+.footer-links ul li {
+  padding-bottom: 1.2rem;
+}
+
+.footer-links ul li a {
+  color: white;
+  font-size: 1.8rem;
   text-decoration: none;
 }
 /* *-- MEDİA QUERİES */
@@ -361,7 +399,7 @@ header .logo i {
   }
   .nav-wrapper {
     font-size: 1.7rem;
-    margin-right: 10rem;
+    margin-right: 4rem;
   }
   .owl-carousel {
     max-width: auto !important;
@@ -372,6 +410,10 @@ header .logo i {
   }
   .owl-nav span {
     font-size: 5rem;
+  }
+  .owl-dot {
+    width: 1.8rem;
+    height: 1.8rem;
   }
   .dishes .box-container {
     display: grid;
@@ -387,14 +429,53 @@ header .logo i {
   }
 
   .footer {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--black);
+    color: white;
   }
-  .footer .box-container {
-    padding: 0;
-    margin-left: 4rem;
-    text-align: left;
+
+  .footer-header {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .logo i {
+    color: var(--green);
+  }
+  .footer-section.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-content {
+    justify-content: space-between;
+    margin-left: 15%;
+  }
+  .contact,
+  .social {
+    flex: 1;
+  }
+  .social {
+    color: white;
+    display: block;
+  }
+  .contact {
+    font-size: 1.2rem;
+    display: block;
+  }
+  .contact p {
+    padding: 0rem;
+  }
+
+  .social a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+  }
+  .footer-links ul li a {
+    list-style: none;
+    font-size: 1.4rem;
+    color: white;
   }
 }
 

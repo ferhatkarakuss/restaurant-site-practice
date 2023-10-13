@@ -20,15 +20,15 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-const priceIcons = document.querySelectorAll(".fiyat");
+const kaloriButon = document.querySelectorAll(".kalori");
 const hazirlikButon = document.querySelectorAll(".hazirlik");
 const alerjenButon = document.querySelectorAll(".alerjen");
 
-priceIcons.forEach((icon) => {
+hazirlikButon.forEach((icon) => {
   icon.addEventListener("click", function () {
     iziToast.show({
-      title: "Fiyat:",
-      message: " 100 TL",
+      title: "Hazırlanma Süresi:",
+      message: "15 Dakika",
       titleColor: "white",
       messageColor: "white",
       titleSize: "2rem",
@@ -38,11 +38,11 @@ priceIcons.forEach((icon) => {
   });
 });
 
-hazirlikButon.forEach((icon) => {
+kaloriButon.forEach((icon) => {
   icon.addEventListener("click", function () {
     iziToast.show({
-      title: "Hazırlanma Süresi:",
-      message: "15 Dakika",
+      title: "Kalori:",
+      message: " 600 Kcal",
       titleColor: "white",
       messageColor: "white",
       titleSize: "2rem",
