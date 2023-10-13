@@ -103,6 +103,26 @@ header .logo i {
   color: var(--black);
   max-height: 1rem;
 }
+.owl-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.owl-dot {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--black) !important; /* Nokta rengi */
+  border-radius: 50%; /* Yuvarlak şekil verir */
+  margin: 0 5px; /* Noktalar arasındaki boşluk */
+  cursor: pointer;
+  color: #000000;
+}
+
+.owl-dot.active {
+  background-color: var(--green) !important; /* Aktif nokta rengi */
+}
+
 .container {
   margin-top: 10rem;
   margin-left: auto;
@@ -131,7 +151,6 @@ header .logo i {
   align-items: center;
   text-align: center;
   display: flex;
-  margin-right: 1.5rem;
   flex-direction: column;
 }
 
@@ -358,10 +377,13 @@ header .logo i {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 3rem;
+    text-align: center;
   }
-
-  .dishes {
-    padding-left: 2rem;
+  .dishes .box-container .box {
+    margin: 0 auto;
+    display: inline-block;
+    width: 90%;
+    max-width: 400px;
   }
 
   .footer {
