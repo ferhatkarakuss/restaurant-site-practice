@@ -1,3 +1,8 @@
+const toTop = document.querySelector(".to-top");
+const kaloriButon = document.querySelectorAll(".kalori");
+const hazirlikButon = document.querySelectorAll(".hazirlik");
+const alerjenButon = document.querySelectorAll(".alerjen");
+
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel();
 });
@@ -19,10 +24,6 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
-
-const kaloriButon = document.querySelectorAll(".kalori");
-const hazirlikButon = document.querySelectorAll(".hazirlik");
-const alerjenButon = document.querySelectorAll(".alerjen");
 
 hazirlikButon.forEach((icon) => {
   icon.addEventListener("click", function () {
@@ -64,4 +65,11 @@ alerjenButon.forEach((icon) => {
       backgroundColor: "#192a56",
     });
   });
+});
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
 });

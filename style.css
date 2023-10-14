@@ -276,6 +276,30 @@ header .logo i {
   font-size: 1.8rem;
   text-decoration: none;
 }
+
+.to-top {
+  background: var(--black);
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
 /* *-- MEDİA QUERİES */
 
 @media (max-width: 991px) {
@@ -463,11 +487,11 @@ header .logo i {
   .contact {
     font-size: 1.2rem;
     display: block;
+    margin-top: 1.5rem;
   }
 
   .contact h2 {
-    padding-bottom: 15px;
-    padding-top: 10px;
+    padding-top: 1.5rem;
   }
   .contact p {
     padding: 0rem;
